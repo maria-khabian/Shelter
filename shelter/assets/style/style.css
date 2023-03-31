@@ -831,6 +831,7 @@ html::-webkit-scrollbar {
     text-align: left;
     margin: 0;
   }
+
   .about__description p {
     margin-bottom: 23px;
   }
@@ -863,22 +864,20 @@ html::-webkit-scrollbar {
     gap: 55px 64px;
   }
 
-  /* .help-item__subtitle {
-    margin-top: 36px;
-  }
-
-  .help-list__item:nth-child(8) .help-list__img {
-    margin-top: 5px;
-    width: 58px;
-    height: auto;
-  }
-
-  .help-list__item:nth-child(8) .help-item__subtitle {
-    margin-top: 38px;
-  } */
-
-  .footer-adress{
+  .footer-adress {
     margin-left: 4px;
+  }
+
+}
+
+@media only screen and (max-width: 767px) {
+
+  .nav-list {
+      display: none;
+    }
+
+  .hamburger {
+    display: block;
   }
 
 }
@@ -893,6 +892,7 @@ html::-webkit-scrollbar {
     text-align: center;
     margin: 0 auto;
   }
+
   .not-only__info {
     max-width: 100%;
     margin-left: -2px;
@@ -900,9 +900,9 @@ html::-webkit-scrollbar {
     text-align: center;
   }
 
-  .nav-list {
+  /* .nav-list {
     display: none;
-  }
+  } */
 
   .about-row {
     max-width: 100%;
@@ -913,9 +913,9 @@ html::-webkit-scrollbar {
     margin: 0;
   }
 
-  .hamburger {
+  /* .hamburger {
     display: inline-block;
-  }
+  } */
 
   .slider-icon {
     top: 80.5%;
@@ -999,6 +999,7 @@ html::-webkit-scrollbar {
     margin-top: -2px;
     letter-spacing: 0.06em;
   }
+
   /* :nth-last-child(2) - предпоследний элемент в группе*/
   .our-friends-item:nth-last-child(2) {
     display: none;
@@ -1046,7 +1047,7 @@ html::-webkit-scrollbar {
     padding: 42px 0px 42px;
   }
 
-  .in-addition__info{
+  .in-addition__info {
     display: flex;
     flex-direction: column;
     align-self: center;
@@ -1156,6 +1157,3 @@ html::-webkit-scrollbar {
 
 }
 
-/* @media only screen and (max-width: 320px) {
-
-} */
