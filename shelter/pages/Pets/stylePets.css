@@ -115,10 +115,13 @@ html::-webkit-scrollbar {
 
 .hamburger {
   display: none;
-  position: relative;
+  position: absolute;
+  top: 47px;
+  right: 20px;
   width: 30px;
   height: 22px;
   cursor: pointer;
+  transition: all 0.3s ease 0s;
 }
 
 .hamburger__line,
@@ -533,12 +536,64 @@ html::-webkit-scrollbar {
 
 @media only screen and (max-width: 767px) {
 
-  .nav-list {
+  /* .nav-list {
     display: none;
   }
 
   .hamburger {
     display: block;
+  } */
+
+  .body._lock{
+    overflow: hidden;
+  }
+
+  .hamburger {
+    display: block;
+    z-index: 10;
+    transition: all 0.5s ease 0s;
+  }
+
+  .hamburger._active {
+    transform: rotate(90deg);
+  }
+
+  .header-menu._lock {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(41, 41, 41, 0.6);
+    transition: all 0.5s ease 0s;
+  }
+
+  .navigate{
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    transition: right 0.5s ease 0s;
+  }
+  .navigate._active{
+    right: 0;
+  }
+
+  .nav-list{
+    width: 320px;
+    height: 100%;
+    background-color: var(--color-light-xl);
+    flex-direction: column;
+    row-gap: 40px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .nav-list__item {
+    margin-top: 0;
+    margin-left: 0;
+    font-size: 3.2rem;
+    line-height: 160%;
   }
 
 }
