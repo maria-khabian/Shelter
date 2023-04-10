@@ -362,12 +362,59 @@ html::-webkit-scrollbar {
 .slide-next {
   right: 40px;
 }
+.slider-icon_disabled {
+  border: 2px solid var(--color-dark-s);
+}
 
-.our-friends-list {
+
+.our-friends-slideCarusel-wrapper {
+  max-width: 1050px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+.our-friends-slideCarusel{
   display: flex;
+  position: relative;
+  left: -1050px;
+  column-gap: 90px;
+}
+
+.our-friends-SliderPrev,
+.our-friends-list,
+.our-friends-SliderNext {
+  /* display: flex;
   justify-content: space-between;
   padding: 0 105px;
   margin-top: 60px;
+  overflow: hidden; */
+  /* max-width: 1050px; */
+  max-width: 990px;
+  display: flex;
+  justify-content: space-around;
+  margin: 0 auto;
+  margin-top: 60px;
+  /* overflow: hidden; */
+  column-gap: 90px;
+}
+
+@keyframes move-prev {
+  from {left: -990;}
+  to {left: 0px}
+}
+
+.transition-prev{
+  animation-name: move-prev;
+  animation-duration: 5s;
+}
+
+@keyframes move-next {
+  from {left: -990;}
+  to {left: -2100px}
+}
+
+.transition-next{
+  animation-name: move-next;
+  animation-duration: 5s;
 }
 
 .our-friends-item {
