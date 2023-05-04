@@ -1,10 +1,10 @@
+//import { pets } from './assets/pets.js'
 import { openMenuClickBurger, deleteOpenMenuClickLink, closeMenuClickEmptyArea } from './modules/burger.js';
 import {getRandomNum} from './modules/helpFunc.js';
 
 openMenuClickBurger()
 deleteOpenMenuClickLink()
 closeMenuClickEmptyArea()
-
 
 const slidePrev = document.querySelector('.slide-prev')
 const slideNext = document.querySelector('.slide-next')
@@ -157,14 +157,5 @@ carusel.addEventListener("animationend", (animationEvent) => {
   slidePrev.addEventListener("click", changeSlidePrev);
   slideNext.addEventListener("click", changeSlideNext);
 });
-
-
-
-
-
-
-
-
-
 
 

@@ -362,6 +362,7 @@ html::-webkit-scrollbar {
 .slide-next {
   right: 40px;
 }
+
 .slider-icon_disabled {
   border: 2px solid var(--color-dark-s);
 }
@@ -372,7 +373,8 @@ html::-webkit-scrollbar {
   overflow: hidden;
   margin: 0 auto;
 }
-.our-friends-slideCarusel{
+
+.our-friends-slideCarusel {
   display: flex;
   position: relative;
   left: -1050px;
@@ -382,37 +384,40 @@ html::-webkit-scrollbar {
 .our-friends-SliderPrev,
 .our-friends-list,
 .our-friends-SliderNext {
-  /* display: flex;
-  justify-content: space-between;
-  padding: 0 105px;
-  margin-top: 60px;
-  overflow: hidden; */
-  /* max-width: 1050px; */
   max-width: 990px;
   display: flex;
   justify-content: space-around;
   margin: 0 auto;
   margin-top: 60px;
-  /* overflow: hidden; */
   column-gap: 90px;
 }
 
 @keyframes move-prev {
-  from {left: -990;}
-  to {left: 0px}
+  from {
+    left: -990;
+  }
+
+  to {
+    left: 0px
+  }
 }
 
-.transition-prev{
+.transition-prev {
   animation-name: move-prev;
   animation-duration: 5s;
 }
 
 @keyframes move-next {
-  from {left: -990;}
-  to {left: -2100px}
+  from {
+    left: -990;
+  }
+
+  to {
+    left: -2100px
+  }
 }
 
-.transition-next{
+.transition-next {
   animation-name: move-next;
   animation-duration: 5s;
 }
@@ -748,7 +753,81 @@ html::-webkit-scrollbar {
 /* MEDIA ----------------------------------------------------------------------------------------------------*/
 
 
-@media only screen and (max-width: 1280px) {}
+/* @media only screen and (max-width: 1279px) {
+  .our-friends-slideCarusel-wrapper {
+    max-width: 630px;
+  }
+
+  .our-friends-slideCarusel {
+    left: -690px;
+    column-gap: 60px;
+  }
+
+  .our-friends-SliderPrev,
+  .our-friends-list,
+  .our-friends-SliderNext {
+    max-width: 630px;
+    column-gap: 60px;
+  }
+
+  @keyframes move-prev {
+    from {
+      left: -690px;
+    }
+
+    to {
+      left: 0px
+    }
+  }
+
+  @keyframes move-next {
+    from {
+      left: -690px;
+    }
+
+    to {
+      left: -1380px
+    }
+  }
+} */
+
+@media only screen and (max-width: 1250px) {
+  .our-friends-slideCarusel-wrapper {
+    max-width: 700px;
+  }
+
+  .our-friends-slideCarusel {
+    left: -690px;
+    column-gap: 90px;
+  }
+
+  .our-friends-SliderPrev,
+  .our-friends-list,
+  .our-friends-SliderNext {
+    max-width: 630px;
+    column-gap: 90px;
+  }
+
+  @keyframes move-prev {
+    from {
+      left: -690;
+    }
+
+    to {
+      left: 0px
+    }
+  }
+
+  @keyframes move-next {
+    from {
+      left: -690;
+    }
+
+    to {
+      left: -1380px
+    }
+  }
+}
 
 @media only screen and (max-width: 1180px) {
 
@@ -809,14 +888,14 @@ html::-webkit-scrollbar {
     margin-top: 80px;
   }
 
-  .our-friends-list {
+  /* .our-friends-list {
     justify-content: space-around;
     padding: 0 94px;
-  }
+  } */
 
-  .our-friends-item:last-child {
+  /* .our-friends-item:last-child {
     display: none;
-  }
+  } */
 
   .help-list {
     max-width: 900px;
@@ -923,7 +1002,46 @@ html::-webkit-scrollbar {
 
 @media only screen and (max-width: 767px) {
 
-  .body._lock{
+  /* ------------------------------------------------- */
+
+  .our-friends-slideCarusel-wrapper {
+    max-width: 700px;
+  }
+
+  .our-friends-slideCarusel {
+    left: -690px;
+    column-gap: 90px;
+  }
+
+  .our-friends-SliderPrev,
+  .our-friends-list,
+  .our-friends-SliderNext {
+    max-width: 630px;
+    column-gap: 90px;
+  }
+
+  @keyframes move-prev {
+    from {
+      left: -690;
+    }
+
+    to {
+      left: 0px
+    }
+  }
+
+  @keyframes move-next {
+    from {
+      left: -690;
+    }
+
+    to {
+      left: -1380px
+    }
+  }
+
+  /* ------------------------------------------------- */
+  .body._lock {
     overflow: hidden;
   }
 
@@ -947,18 +1065,19 @@ html::-webkit-scrollbar {
     transition: all 0.5s ease 0s;
   }
 
-  .navigate{
+  .navigate {
     height: 100%;
     position: fixed;
     top: 0;
     right: -100%;
     transition: right 0.5s ease 0s;
   }
-  .navigate._active{
+
+  .navigate._active {
     right: 0;
   }
 
-  .nav-list{
+  .nav-list {
     width: 320px;
     height: 100%;
     background-color: var(--color-dark-3xl);
