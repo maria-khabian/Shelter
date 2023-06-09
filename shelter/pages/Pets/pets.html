@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="html" lang="en">
 
 <head>
   <meta charset="UTF-8">
@@ -11,96 +11,67 @@
   <title>Shelter</title>
 </head>
 
-<body class="body">
+<body class="body bodyPets">
   <header class="header">
     <div class="header-top container">
       <div class="header-logo">
         <h1 class="header-logo__title"><a href="./../../index.html">Cozy House</a></h1>
         <p class="header-logo__subtitle">Shelter for pets in Boston</p>
       </div>
-      <nav class="navigate">
+      <div class="header-menu">
         <div class="hamburger">
           <span class="hamburger__line"></span>
         </div>
-        <ul class="nav-list">
-          <li class="nav-list__item"><a href="./../../index.html">About the shelter</a></li>
-          <li class="nav-list__item nav-list__item_active"><a href="">Our pets</a></li>
-          <li class="nav-list__item"><a href="./../../index.html#helpTheShelter">Help the shelter</a></li>
-          <li class="nav-list__item"><a href="#contacts">Contacts</a></li>
-        </ul>
-      </nav>
+        <nav class="navigate">
+          <ul class="nav-list">
+            <li class="nav-list__item"><a class="nav-list__link" href="./../../index.html">About the shelter</a></li>
+            <li class="nav-list__item nav-list__item_active"><a class="nav-list__link" href="">Our pets</a></li>
+            <li class="nav-list__item"><a class="nav-list__link" href="./../../index.html#helpTheShelter">Help the
+                shelter</a></li>
+            <li class="nav-list__item"><a class="nav-list__link" href="#contacts">Contacts</a></li>
+          </ul>
+        </nav>
+      </div>
     </div>
   </header>
 
   <main class="main">
+    <div class="pop-up">
+      <div class="pop-up_pet">
+        <button class="pet_btnClose"></button>
+        <div class="pet_img">
+          <img class="pet_img_img" src="" alt="">
+        </div>
+        <div class="pet_content">
+          <div>
+            <h4 class="content_name"></h4>
+            <p class="content_aboutPet"><span class="content_aboutPet__type">Dog</span> - <span
+                class="content_aboutPet__breed">Labrador</span></p>
+          </div>
+          <p class="content_description">Jennifer is a sweet 2 months old Labrador that is patiently waiting to find a
+            new forever home. This girl really enjoys being able to go outside to run and play, but won't hesitate to
+            play up a storm in the house if she has all of her favorite toys.</p>
+          <ul class="content_list">
+            <li class="content_item">Age: <span class="item_description item_age">2 months</span></li>
+            <li class="content_item">Inoculations: <span class="item_description item_inoculations">none</span></li>
+            <li class="content_item">Diseases: <span class="item_description item_diseases">none</span></li>
+            <li class="content_item">Parasites: <span class="item_description item_parasites">none</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
 
     <section class="our-friends">
       <div class="our-friends-row container">
         <h2 class="our-friends__title title">Our friends who<br>are looking for a house</h2>
-        <ul class="our-friends-list">
-          <li class="our-friends-item">
-            <div class="our-friends-item__img">
-              <img src="./../../assets/image/petsPage/pets-katrine-2.jpg" alt="Katrine">
-            </div>
-            <h3 class="our-friends-item__name">Katrine</h3>
-            <button class="our-friends-btn button">Learn more</button>
-          </li>
-          <li class="our-friends-item">
-            <div class="our-friends-item__img">
-              <img src="./../../assets/image/petsPage/pets-jennifer.jpg" alt="Jennifer">
-            </div>
-            <h3 class="our-friends-item__name">Jennifer</h3>
-            <button class="our-friends-btn button">Learn more</button>
-          </li>
-          <li class="our-friends-item">
-            <div class="our-friends-item__img">
-              <img src="./../../assets/image/petsPage/pets-woody.jpg" alt="Woody">
-            </div>
-            <h3 class="our-friends-item__name">Woody</h3>
-            <button class="our-friends-btn button">Learn more</button>
-          </li>
-          <li class="our-friends-item">
-            <div class="our-friends-item__img">
-              <img src="./../../assets/image/petsPage/pets-katrine-1.jpg" alt="Sophia">
-            </div>
-            <h3 class="our-friends-item__name">Sophia</h3>
-            <button class="our-friends-btn button">Learn more</button>
-          </li>
-          <li class="our-friends-item">
-            <div class="our-friends-item__img">
-              <img src="./../../assets/image/petsPage/pets-timmy.jpg" alt="Timmi">
-            </div>
-            <h3 class="our-friends-item__name">Timmi</h3>
-            <button class="our-friends-btn button">Learn more</button>
-          </li>
-          <li class="our-friends-item">
-            <div class="our-friends-item__img">
-              <img src="./../../assets/image/petsPage/pets-charly.jpg" alt="Charly">
-            </div>
-            <h3 class="our-friends-item__name">Charly</h3>
-            <button class="our-friends-btn button">Learn more</button>
-          </li>
-          <li class="our-friends-item">
-            <div class="our-friends-item__img">
-              <img src="./../../assets/image/petsPage/pets-scarlet.jpg" alt="Scarlet">
-            </div>
-            <h3 class="our-friends-item__name">Scarlett</h3>
-            <button class="our-friends-btn button">Learn more</button>
-          </li>
-          <li class="our-friends-item">
-            <div class="our-friends-item__img">
-              <img src="./../../assets/image/petsPage/pets-katrine.jpg" alt="Freddie">
-            </div>
-            <h3 class="our-friends-item__name">Freddie</h3>
-            <button class="our-friends-btn button">Learn more</button>
-          </li>
-        </ul>
+        <div class="card__group">
+        </div>
         <ul class="pagination-list">
-          <li class="pagination__item pagination-next__double _unactive"><span>&lt;&lt;</span></li>
-          <li class="pagination__item pagination-next _unactive"><span>&lt;</span></li>
-          <li class="pagination__item pagination-number _current"><span>1</span></li>
-          <li class="pagination__item pagination-prev _active"><span>&gt;</span></li>
-          <li class="pagination__item pagination-prev__double _active"><span>&gt;&gt;</span></li>
+          <li class="pagination__item pagination-prev__double _unactive" disabled="true"><span>&lt;&lt;</span></li>
+          <li class="pagination__item pagination-prev _unactive" disabled="true"><span>&lt;</span></li>
+          <li class="pagination__item pagination-number _current">1</li>
+          <li class="pagination__item pagination-next"><span>&gt;</span></li>
+          <li class="pagination__item pagination-next__double"><span>&gt;&gt;</span></li>
         </ul>
       </div>
 
@@ -136,7 +107,7 @@
     </div>
 
   </footer>
-  <script src="./indexPets.js"></script>
+  <script type="module" src="./indexPets.js"></script>
 </body>
 
 </html>

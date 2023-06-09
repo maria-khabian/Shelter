@@ -1,37 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="html" lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./assets/style/normalize.css">
-  <link rel="stylesheet" href="./assets/style/style.css">
+  <link rel="stylesheet" href="./assets/style/styleNew.css">
   <link rel="icon" href="./assets/image/favicon/mood.png">
   <title>Shelter</title>
 </head>
 
-<body class="body">
+<body class="body bodyMain">
   <header class="header">
     <div class="header-row container">
       <div class="header-top">
         <div class="header-logo">
           <a href="">
             <h1 class="header-logo__title">Cozy House</h1>
-          <p class="header-logo__subtitle">Shelter for pets in Boston</p>
+            <p class="header-logo__subtitle">Shelter for pets in Boston</p>
           </a>
         </div>
-        <nav class="navigate">
+        <div class="header-menu">
           <div class="hamburger">
             <span class="hamburger__line"></span>
           </div>
-          <ul class="nav-list">
-            <li class="nav-list__item nav-list__item_active"><a href="">About the shelter</a></li>
-            <li class="nav-list__item"><a href="./pages/Pets/pets.html">Our pets</a></li>
-            <li class="nav-list__item"><a href="#helpTheShelter">Help the shelter</a></li>
-            <li class="nav-list__item"><a href="#contacts">Contacts</a></li>
-          </ul>
-        </nav>
+          <nav class="navigate">
+            <ul class="nav-list">
+              <li class="nav-list__item nav-list__item_active"><a class="nav-list__link" href="">About the shelter</a>
+              </li>
+              <li class="nav-list__item"><a class="nav-list__link" href="./pages/Pets/pets.html">Our pets</a></li>
+              <li class="nav-list__item"><a class="nav-list__link" href="#helpTheShelter">Help the shelter</a></li>
+              <li class="nav-list__item"><a class="nav-list__link" href="#contacts">Contacts</a></li>
+            </ul>
+          </nav>
+        </div>
       </div>
     </div>
 
@@ -47,7 +50,32 @@
       </div>
     </div>
   </header>
+
   <main class="main">
+    <div class="pop-up">
+      <div class="pop-up_pet">
+        <button class="pet_btnClose"></button>
+        <div class="pet_img">
+          <img class="pet_img_img" src="" alt="">
+        </div>
+        <div class="pet_content">
+          <div>
+            <h4 class="content_name"></h4>
+            <p class="content_aboutPet"><span class="content_aboutPet__type">Dog</span> - <span
+                class="content_aboutPet__breed">Labrador</span></p>
+          </div>
+          <p class="content_description">Jennifer is a sweet 2 months old Labrador that is patiently waiting to find a
+            new forever home. This girl really enjoys being able to go outside to run and play, but won't hesitate to
+            play up a storm in the house if she has all of her favorite toys.</p>
+          <ul class="content_list">
+            <li class="content_item">Age: <span class="item_description item_age">2 months</span></li>
+            <li class="content_item">Inoculations: <span class="item_description item_inoculations">none</span></li>
+            <li class="content_item">Diseases: <span class="item_description item_diseases">none</span></li>
+            <li class="content_item">Parasites: <span class="item_description item_parasites">none</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
     <section class="about" id="aboutTheShelter">
       <div class="container">
         <div class="about-row">
@@ -57,12 +85,12 @@
           <div class="about__column">
             <h2 class="about__title title">About the shelter<br> “Cozy House”</h2>
             <div class="about__description">
-              <p >Currently we have 121 dogs and 342 cats on our hands and statistics show
+              <p>Currently we have 121 dogs and 342 cats on our hands and statistics show
                 that
                 only 20% of them will find a family. The others will continue to live with us and will be waiting for a
                 lucky
                 chance to become dearly loved.</p>
-              <p >We feed our wards with the best food and make sure that they do not get
+              <p>We feed our wards with the best food and make sure that they do not get
                 sick, feel comfortable (including psychologically) and well. We are supported by 87 volunteers and 28
                 employees of various skill levels. About 12% of the animals are taken by the shelter staff. Taking care
                 of
@@ -76,38 +104,30 @@
       </div>
 
     </section>
-    <section class="our-friends" id="ourPets">
-      <div class="our-friends-row container">
-        <h2 class="our-friends__title title">Our friends who<br> are looking for a house</h2>
-        <ul class="our-friends-list">
-          <li class="our-friends-item">
-            <div class="our-friends-item__img">
-              <img src="./assets/image/mainPage/pets-katrine.png" alt="Katrine">
+
+    <section class="ourFriends" id="ourPets">
+      <div class="ourFriends__row container">
+        <h2 class="ourFriends__title title">Our friends who<br> are looking for a house</h2>
+        <div class="carusel__wrapper">
+          <button class="slide-prev slider-icon"></button>
+          <div class="carusel">
+            <div class="carusel__container">
+              <div class="card__group card-group__prev">
+              </div>
+              <div class="card__group card-group__active">
+              </div>
+              <div class="card__group card-group__next">
+              </div>
             </div>
-            <h3 class="our-friends-item__name">Katrine</h3>
-            <button class="our-friends-btn button">Learn more</button>
-          </li>
-          <li class="our-friends-item">
-            <div class="our-friends-item__img">
-              <img src="./assets/image/mainPage/pets-jennifer.png" alt="Jennifer">
-            </div>
-            <h3 class="our-friends-item__name">Jennifer</h3>
-            <button class="our-friends-btn button">Learn more</button>
-          </li>
-          <li class="our-friends-item">
-            <div class="our-friends-item__img">
-              <img src="./assets/image/mainPage/pets-woody.png" alt="Woody">
-            </div>
-            <h3 class="our-friends-item__name">Woody</h3>
-            <button class="our-friends-btn button">Learn more</button>
-          </li>
-        </ul>
-        <button class="slide-prev slider-icon"></button>
-        <button class="slide-next slider-icon"></button>
-        <a href="./pages/Pets/pets.html" class="our-friends__more btn">Get to know the rest</a>
+          </div>
+
+          <button class="slide-next slider-icon"></button>
+        </div>
+        <a href="./pages/Pets/pets.html" class="ourFriends__more btn">Get to know the rest</a>
       </div>
 
     </section>
+
     <section class="help" id="helpTheShelter">
       <div class="help-row container">
         <h2 class="help__title title">How you can help<br>our shelter</h2>
@@ -220,7 +240,7 @@
       </div>
     </div>
 
-    <script src="./index.js"></script>
+    <script type="module" src="./indexNew.js"></script>
 
   </footer>
 

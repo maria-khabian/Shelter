@@ -1,2 +1,55 @@
-console.log('ЗДРАВСТВУЙ, УВАЖАЕМЫЙ АНОНИМНЫЙ ПРОВЕРЯЮЩИЙ. Пожалуйста, после выставления оценки, заходи в приложение app-rs-school (во вкладке Cross-Check: Review выбираете студента и вы увидите историю пересписки), чтобы посмотреть ответ от проверяемого студента! Очень часто сталкиваюсь с тем, что проверяющие совершают ошибки при проверке, поэтому важно чтобы с вашей оценкой был согласен и проверяемый студент! Давайте избежим неприятностей! Спасибо за внимание!')
-console.log('ИТОГОВЫЙ БАЛЛ по самопроверке - 100 \n\n Вёрстка страницы Main соответствует макету при ширине экрана 1280px: +14 \n\n блок <header>: +2 \n блок Not only: +2 \n блок About: +2 \n блок Our Friends: +2 \n блок Help: +2 \n блок In addition: +2 \n блок <footer>: +2 \n\n Вёрстка страницы Main соответствует макету при ширине экрана 768px: +14 \n\n блок <header>: +2 \n блок Not only: +2 \n блок About: +2 \n блок Our Friends: +2 \n блок Help: +2 \n блок In addition: +2 \n блок <footer>: +2 \n\n Вёрстка страницы Main соответствует макету при ширине экрана 320px: +14 \n\n блок <header>: +2 \n блок Not only: +2 \n блок About: +2 \n блок Our Friends: +2 \n блок Help: +2 \n блок In addition: +2 \n блок <footer>: +2 \n\n Вёрстка страницы Pets соответствует макету при ширине экрана 1280px: +6 \n\n блок <header>: +2 \n блок Our Friends: +2 \n блок <footer>: +2 \n\n Вёрстка страницы Pets соответствует макету при ширине экрана 768px: +6 \n\n блок <header>: +2 \n блок Our Friends: +2 \n блок <footer>: +2 \n\n Вёрстка страницы Pets соответствует макету при ширине экрана 320px: +6 \n\n блок <header>: +2 \n блок Our Friends: +2 \n блок <footer>: +2 \n\n Ни на одном из разрешений до 320px включительно не появляется горизонтальная полоса прокрутки, справа от отдельных блоков не появляются белые поля. Весь контент страницы при этом сохраняется: не обрезается и не удаляется: +20 \n\n нет полосы прокрутки при ширине страницы Main от 1280рх до 768рх: +5 \n нет полосы прокрутки при ширине страницы Main от 768рх до 320рх: +5 \n нет полосы прокрутки при ширине страницы Pets от 1280рх до 768рх: +5 \n нет полосы прокрутки при ширине страницы Pets от 768рх до 320рх: +5 \n\n Верстка резиновая: при плавном изменении размера экрана от 1280px до 320px верстка подстраивается под этот размер, элементы верстки меняют свои размеры и расположение, не наезжают друг на друга, изображения могут менять размер, но сохраняют правильные пропорции: +8 \n\n на странице Main: +4 \n на странице Pets: +4 \n\n При ширине экрана меньше 768px на обеих страницах меню в хедере скрывается, появляется иконка бургер-меню (открытие меню при клике на иконку бургер-меню на текущем этапе не проверяется): +4 \n\n Верстка обеих страниц валидная, прошла проверку в валидаторе, с результатом на обоих страницах "Document checking completed. No errors or warnings to show.": +8')
+import { openMenuClickBurger, deleteOpenMenuClickLink, closeMenuClickEmptyArea } from './../../modules/burger.js';
+import { pagination } from '../../modules/pagination.js';
+import {popUp} from './../../modules/pop-up.js';
+
+
+let cardCount = 8;
+
+openMenuClickBurger()
+deleteOpenMenuClickLink()
+closeMenuClickEmptyArea()
+pagination(cardCount)
+popUp()
+
+let is320Triggered = false;
+let is630Triggered = false;
+let is1220Triggered = false;
+
+function checkWindowWidth() {
+  if (window.innerWidth < 630) {
+    if (!is320Triggered) {
+      cardCount = 3
+      console.log(cardCount)
+      pagination(cardCount)
+      popUp()
+      is320Triggered = true;
+      is630Triggered = false;
+      is1220Triggered = false;
+    }
+  } else if (window.innerWidth >= 630 && window.innerWidth < 1220) {
+    if (!is630Triggered) {
+      cardCount = 6
+      console.log(cardCount)
+      pagination(cardCount)
+      popUp()
+      is1220Triggered = false;
+      is630Triggered = true;
+      is320Triggered = false;
+    }
+  } else if (window.innerWidth >= 1220) {
+    if (!is1220Triggered) {
+      cardCount = 8
+      console.log(cardCount)
+      pagination(cardCount)
+      popUp()
+      is1220Triggered = true;
+      is630Triggered = false;
+      is320Triggered = false;
+    }
+  } else {
+    is320Triggered = false;
+    is630Triggered = false;
+    is1220Triggered = false;
+  }
+}
+window.addEventListener('resize', checkWindowWidth);
