@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="html" lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./assets/style/normalize.css">
-  <link rel="stylesheet" href="./assets/style/style.css">
+  <link rel="stylesheet" href="./assets/style/styleNew.css">
   <link rel="icon" href="./assets/image/favicon/mood.png">
   <title>Shelter</title>
 </head>
 
-<body class="body">
+<body class="body bodyMain">
   <header class="header">
     <div class="header-row container">
       <div class="header-top">
@@ -50,7 +50,32 @@
       </div>
     </div>
   </header>
+
   <main class="main">
+    <div class="pop-up">
+      <div class="pop-up_pet">
+        <button class="pet_btnClose"></button>
+        <div class="pet_img">
+          <img class="pet_img_img" src="" alt="">
+        </div>
+        <div class="pet_content">
+          <div>
+            <h4 class="content_name"></h4>
+            <p class="content_aboutPet"><span class="content_aboutPet__type">Dog</span> - <span
+                class="content_aboutPet__breed">Labrador</span></p>
+          </div>
+          <p class="content_description">Jennifer is a sweet 2 months old Labrador that is patiently waiting to find a
+            new forever home. This girl really enjoys being able to go outside to run and play, but won't hesitate to
+            play up a storm in the house if she has all of her favorite toys.</p>
+          <ul class="content_list">
+            <li class="content_item">Age: <span class="item_description item_age">2 months</span></li>
+            <li class="content_item">Inoculations: <span class="item_description item_inoculations">none</span></li>
+            <li class="content_item">Diseases: <span class="item_description item_diseases">none</span></li>
+            <li class="content_item">Parasites: <span class="item_description item_parasites">none</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
     <section class="about" id="aboutTheShelter">
       <div class="container">
         <div class="about-row">
@@ -79,27 +104,30 @@
       </div>
 
     </section>
-    <section class="our-friends" id="ourPets">
-      <div class="our-friends-row container">
-        <h2 class="our-friends__title title">Our friends who<br> are looking for a house</h2>
-        <div class="our-friends-slideCarusel-wrapper">
-          <div class="our-friends-slideCarusel">
-            <div class="our-friends-SliderPrev" data-slider-value="prev">
-            </div>
-            <div class="our-friends-list">
-            </div>
-            <div class="our-friends-SliderNext" data-slider-value="next">
+
+    <section class="ourFriends" id="ourPets">
+      <div class="ourFriends__row container">
+        <h2 class="ourFriends__title title">Our friends who<br> are looking for a house</h2>
+        <div class="carusel__wrapper">
+          <button class="slide-prev slider-icon"></button>
+          <div class="carusel">
+            <div class="carusel__container">
+              <div class="card__group card-group__prev">
+              </div>
+              <div class="card__group card-group__active">
+              </div>
+              <div class="card__group card-group__next">
+              </div>
             </div>
           </div>
 
+          <button class="slide-next slider-icon"></button>
         </div>
-
-        <button class="slide-prev slider-icon"></button>
-        <button class="slide-next slider-icon"></button>
-        <a href="./pages/Pets/pets.html" class="our-friends__more btn">Get to know the rest</a>
+        <a href="./pages/Pets/pets.html" class="ourFriends__more btn">Get to know the rest</a>
       </div>
 
     </section>
+
     <section class="help" id="helpTheShelter">
       <div class="help-row container">
         <h2 class="help__title title">How you can help<br>our shelter</h2>
@@ -212,7 +240,7 @@
       </div>
     </div>
 
-    <script type="module" src="./index.js"></script>
+    <script type="module" src="./indexNew.js"></script>
 
   </footer>
 
